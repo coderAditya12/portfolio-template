@@ -1,9 +1,11 @@
+/* General styles for all screen sizes */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
+
 #container {
   width: 100%;
   min-height: 100vh;
@@ -13,9 +15,8 @@ nav {
   width: 100%;
   height: 4rem;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
-  /* background-color: #a4ee11; */
   padding: 2.5rem 3rem;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
 }
@@ -25,102 +26,115 @@ nav ul {
   gap: 2rem;
   list-style: none;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #262642;
   font-size: 1rem;
 }
+
 #hero {
   display: flex;
   align-items: center;
   width: 100%;
   height: auto;
-  /* background-color: blue; */
   padding: 2.5rem 3rem;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
+
 #left {
   width: 50%;
   height: 30rem;
-  /* background-color: red; */
   margin-top: 3rem;
   padding: 1rem 3rem;
   color: #4f4f4f;
 }
+
 #left > h1 {
   font-weight: normal;
 }
+
 #left #name {
   font-weight: bold;
   margin: 1.5rem 0;
   font-size: 3rem;
 }
+
 #expertise {
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 6px;
 }
+
 #right {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 37rem;
   margin-top: 4rem;
   padding-right: 3rem;
 }
+
 #right img {
   max-width: 100%;
   max-height: 100%;
-  /* margin-top: 4rem; */
 }
+
 .label {
   text-align: center;
   color: #4f4f4f;
   padding: auto;
   border-bottom: 1px solid gray;
 }
+
 #About {
   width: 100%;
   height: auto;
   padding: 2rem 3rem;
   display: flex;
+  flex-wrap: wrap;
 }
+
 #About-left,
 #About-right {
   margin-top: 2rem;
   padding: 1rem 3rem;
   width: 50%;
 }
+
 #About-right {
   padding: 6rem 3rem;
   color: #4f4f4f;
 }
+
 #About-right h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 #About-right p {
   line-height: 1.5rem;
 }
+
 #education {
   width: 100%;
-  height: 70%;
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 4rem 6rem;
-  gap: 1rem;
+
 }
+
 #upper,
 #lower {
   width: 100%;
-  height: 30%;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  flex-wrap: wrap;
 }
+
 .card {
   width: 49%;
   padding: 2rem 4rem;
@@ -138,9 +152,10 @@ nav ul li a {
   padding: 2rem;
   margin-top: 1rem;
 }
+
 .skill-card {
-  flex: 0 1 calc(16.666% - 20px); /* Adjusts to about 6 items per row */
-  width: 150px; /* Minimum width for small screens */
+  flex: 0 1 calc(16.666% - 20px);
+  width: 150px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -148,19 +163,23 @@ nav ul li a {
   text-align: center;
   transition: transform 0.3s ease;
 }
+
 .skill-card:hover {
   transform: translateY(-5px);
 }
+
 .skill-icon {
   width: 80px;
   height: 80px;
   margin-bottom: 10px;
   object-fit: contain;
 }
+
 .skill-name {
   font-weight: bold;
   color: #333;
 }
+
 #Contact {
   display: flex;
   flex-wrap: wrap;
@@ -169,9 +188,10 @@ nav ul li a {
   padding: 2rem;
   margin-top: 1rem;
 }
+
 #contact-card {
   width: 300px;
-  height: 150px; /* Minimum width for small screens */
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,8 +202,147 @@ nav ul li a {
   text-align: center;
   transition: transform 0.3s ease;
 }
+
 #contact-card a {
   font-size: 5rem;
   text-decoration: none;
   color: #4f4f4f;
+}
+
+/* Responsive Styles */
+/* Mobile Responsive Styles */
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  #container {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  nav {
+    padding: 1.5rem 2rem;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  #hero {
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #left {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  #left > h1 {
+    font-size: 2rem;
+  }
+
+  #left #name {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  #expertise {
+    font-size: 1.2rem;
+  }
+
+  #right {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  #right img {
+    max-width: 80%;
+  }
+
+  #About {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  #About-right {
+    width: 100%;
+    padding: 1rem;
+  }
+  #About-left {
+    width: 100%;
+  }
+  #About-left img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #About-right {
+    padding: 2rem;
+  }
+
+  #About-right h2 {
+    font-size: 1.8rem;
+  }
+
+  #About-right p {
+    line-height: 1.4rem;
+  }
+  #education {
+    padding: 1rem;
+   
+  }
+
+  #upper,
+  #lower {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    padding: 1.5rem 2rem;
+  }
+
+  .skills-container {
+    padding: 1rem;
+  }
+
+  .skill-card {
+    flex: 0 1 calc(33.333% - 20px);
+  }
+
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  #Contact {
+    padding: 1rem;
+  }
+
+  #contact-card {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  #contact-card a {
+    font-size: 3rem;
+  }
 }
