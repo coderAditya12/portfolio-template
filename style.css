@@ -119,16 +119,16 @@ nav ul li a {
 
 #education {
   width: 100%;
-  height: auto;
+  height: 70%;
   display: flex;
   flex-direction: column;
   padding: 4rem 6rem;
-
 }
 
 #upper,
 #lower {
   width: 100%;
+  height: auto;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -307,10 +307,12 @@ nav ul li a {
   #upper,
   #lower {
     flex-direction: column;
+    gap:2rem;
     align-items: center;
   }
 
   .card {
+    text-align: center;
     width: 100%;
     padding: 1.5rem 2rem;
   }
